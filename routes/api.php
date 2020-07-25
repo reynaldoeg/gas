@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+#Gas
+Route::get('/getallgases', 'GasController@getallgases');
+Route::get('/getgas/{place_id}', 'GasController@getgas');
+
+
+# ZipCodes
+Route::get('/getstates', 'ZipCodeController@getStates');
+Route::get('/getmunicipality/{state}', 'ZipCodeController@getMunicipality');
