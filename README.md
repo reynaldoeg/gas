@@ -3,8 +3,9 @@
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
+Este sitio permite consultar la ubicación geográfica de las gasolineras de México y precio de venta de gasolina por litro.
 
-## instalación
+## Instalación
 
 Descargar el repositorio de github.
 ```s 
@@ -30,6 +31,38 @@ Generar "application key"
 ```s 
 $ php artisan key:generate
 ```
+
+### Migraciones y Base de Datos
+
+El proyecto cuenta con una base de datos basada en la información proporcionada por Sepomex con los difrentes estados, municipios y códigos postales.
+
+Se separó en distintas tablas para cumplir con el proceso de Normalización de Baese de Datos. 
+
+Tabla Estados
+
+id  | clave   | clave3| estado
+--- | ---     | ---   | ---
+1   | AG      | AGU   | Aguascalientes
+2   | BC      | BCN   | Baja California
+3   | BS      | BCS   | Baja California Sur
+
+Tabla Municipios
+
+id  | id_estado | municipio
+--- | ---       | ---
+272 | 9         | Azcapotzalco
+273 | 9         | Benito Juarez
+374 | 9         | Coyoacan
+
+Tabla de Códigos Postales
+
+id  | codigo| id_municipio  | asentamiento
+--- | ---   | ---           | ---
+272 | 02000 | 272           | Centro de Azcapotzalco
+273 | 02010 | 272           | Los Reyes
+374 | 02020 | 272           | San Marcos
+
+Para poder generar estas tablas, se sigue el proceso de migraciones descrito en Laravel
 
 Generar tabla de Migraciones 
 ```s 
