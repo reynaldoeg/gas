@@ -84,9 +84,10 @@ Correr servidor local
 $ php artisan serve
 ```
 
-<p>Laravel se podrá ejecutar en la siguiente dirección <a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a></p>
+<p>Laravel se podrá ejecutar en la siguiente dirección de manera local <a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a></p>
 
-El sistema se encuantra se encuentra funcional en la siguiente dirección [http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/](http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/)
+El sistema se encuantra se encuentra funcional en la siguiente dirección
+ [http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/](http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/)
 
 ## API
 
@@ -104,7 +105,7 @@ GET     | /getstates                    | Regresa una lista de los estados de MX
 GET     | /getmunicipality/{id_state}   | Regresa una lista de los municipios del estado
 
 
-Ejemplo:
+Ejemplo (getstates):
 
 GET: http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/api/getstates
 
@@ -131,7 +132,7 @@ Regresa el siguiente JSON:
 ]
 ```
 
-Ejemplo:
+Ejemplo (getmunicipality/{id_state}):
 
 GET: http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/api/getmunicipality/9
 
@@ -164,7 +165,7 @@ GET     | /getalllocations  | Regresa un listado de todas las coordenadas geogra
 GET     | /getgas/{place_id}| Regresa el detalle de la gasolinería indicada en id que se envía
 
 
-Ejemplo:
+Ejemplo (getallgases):
 
 GET: http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/api/getallgases
 
@@ -193,7 +194,7 @@ Regresa el siguiente JSON:
 }
 ```
 
-Ejemplo:
+Ejemplo (getalllocations):
 
 GET: http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/api/getalllocations
 
@@ -222,7 +223,7 @@ Regresa el siguiente JSON:
 }
 ```
 
-Ejemplo:
+Ejemplo (getgas/{place_id}):
 
 GET: http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/api/getgas/6684
 
@@ -245,3 +246,12 @@ Regresa el siguiente JSON:
 }
 ```
 
+## Front
+
+El la barra de navegación cuenta con un cuadro para buscar por el ID de la gasolinera, al presionar el botón de búsqueda, apareceran los precios de la gasolina, los datos de la estación y la ubicación en el mapa.
+
+<img src="http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/img/front01.PNG">
+
+En la parte de abajo, aparece un mapa de todas las gasolineras en el país, al dar un clic en el icono de agrupación, se ira acercando la zona y al colocar el puntero sobre el pin de ubicación, aparecera el ID de la gasolinería.
+
+<img src="http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/img/front01.PNG">
