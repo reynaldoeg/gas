@@ -250,8 +250,8 @@ Regresa el siguiente JSON:
 
 El la barra de navegación cuenta con un cuadro para buscar por el ID de la gasolinera, al presionar el botón de búsqueda, apareceran los precios de la gasolina, los datos de la estación y la ubicación en el mapa.
 
-<img src="http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/img/front01.PNG">
+![alt text](https://raw.githubusercontent.com/reynaldoeg/gas/master/public/img/front01.PNG)
 
 En la parte de abajo, aparece un mapa de todas las gasolineras en el país, al dar un clic en el icono de agrupación, se ira acercando la zona y al colocar el puntero sobre el pin de ubicación, aparecera el ID de la gasolinería.
 
-<img src="http://ec2-54-185-117-154.us-west-2.compute.amazonaws.com/img/front01.PNG">
+![alt text](https://raw.githubusercontent.com/reynaldoeg/gas/master/public/img/front02.PNG)
