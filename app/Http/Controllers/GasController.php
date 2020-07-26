@@ -36,6 +36,35 @@ class GasController extends Controller
         return response()->json($response, 200);
     }
 
+    public function getalllocations()
+    {
+        $places = URL::asset('assets/xml/places.xml');
+        $xml = simplexml_load_file($places);
+        $list = $xml->place;
+
+        $gases = [];
+
+        for ($i = 0; $i < count($list); $i++)
+        {
+            $tmp = [
+                'title' => $list[$i]->attributes()->place_id[0] . '',
+                'loc' => [
+                    'lng' => floatval($list[$i]->location->x . ''),
+                    'lat' => floatval($list[$i]->location->y . '')
+                ]
+            ];
+
+            array_push($gases, $tmp);
+        }
+
+        $response = [
+            'success' => true,
+            'results' => $gases
+        ];
+
+        return response()->json($response, 200);
+    }
+
     public function getgas($place_id)
     {
         $places = URL::asset('assets/xml/places.xml');
