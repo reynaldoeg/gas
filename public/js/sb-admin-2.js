@@ -53,8 +53,11 @@
         e.preventDefault();
     });
 
-    $('#search-btn').on('click', function(){
-        var gas_id = $('#search-txt').val();
+    $('.search-btn').on('click', function(){
+
+        var gas_id = $(this).closest('.input-group').find('.search-txt').val();
+        console.log(gas_id);
+        // var gas_id = $('#search-txt').val();
         $.ajax({
             url: `/api/getgas/${gas_id}`,
             type: 'GET',
@@ -66,8 +69,7 @@
                 swal("No se encontro la gasolinera", "Escriba el ID (11702 o 2039)", "error");
             },
             success: function(response) {
-                console.log(response);
-                
+                // console.log(response);
                 var lat = response.results[0].latitud;
                 var lon = response.results[0].longitud
 
@@ -100,7 +102,8 @@
                         console.log(err);
                     },
                     success: function(response) {
-                        console.log(response.plus_code.compound_code);
+                        console.log(response);
+                        //console.log(response.plus_code.compound_code);
                         var address = response.plus_code.compound_code.substring(8)
                         console.log(address);
                         $('#direccion').html(address);
