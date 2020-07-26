@@ -3,6 +3,14 @@
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
+- [Instalación](#Instalación)
+  * [Migraciones y Base de Datos](#migraciones-y-base-de-datos)
+- [API](#api)
+  * [Métodos para obtener estados y municipios](#métodos-para-obtener-estados-y-municipios)
+  * [Métodos para obtener gasolinerias](#métodos-para-obtener-gasolinerias)
+- [Front](#front)
+
+
 Este sitio permite consultar la ubicación geográfica de las gasolineras de México y precio de venta de gasolina por litro.
 
 ## Instalación
