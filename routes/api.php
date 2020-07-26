@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 #Gas
 Route::get('/getallgases', 'GasController@getallgases');
+Route::get('/getalllocations', 'GasController@getalllocations');
 Route::get('/getgas/{place_id}', 'GasController@getgas');
 
 
